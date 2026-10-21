@@ -2,114 +2,168 @@ import type { Metadata } from "next"
 import Link from "next/link"
 
 export const metadata: Metadata = {
-  title: "Privacy Policy | Xpeed Staff Management System",
-  description: "Privacy Policy for the Xpeed Staff Management System.",
+  title: "Privacy Policy | Xpeed Group Software Suite",
+  description: "Privacy Policy for Xpeed Group's software suite: Finance, Salary, FrontDesk (PMS), and more.",
 }
 
 export default function PrivacyPolicyPage() {
   return (
-    <div className="min-h-screen bg-slate-50">
-      <header className="border-b border-slate-200 bg-white">
-        <div className="mx-auto max-w-4xl px-4 py-6 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between">
-            <Link href="/" className="flex items-center gap-3">
-              <div className="relative h-10 w-10 overflow-hidden rounded-full border border-amber-200 bg-amber-100">
-                <img src="/logo.jpeg" alt="Xpeed Group" className="h-full w-full object-cover" />
-              </div>
-              <div>
-                <div className="text-lg font-black tracking-tight text-slate-900">Xpeed Group</div>
-                <div className="text-[10px] font-semibold tracking-[0.26em] text-slate-500 uppercase">Diversified Holdings</div>
-              </div>
-            </Link>
-            <Link href="/" className="text-sm font-medium text-slate-600 hover:text-slate-900 transition">
-              ← Back to Home
-            </Link>
-          </div>
-        </div>
+    <main className="subpage">
+      <header className="subpage-header">
+        <Link className="brand" href="/" aria-label="Xpeed Group home">
+          <span className="brand-mark" aria-hidden="true">X</span>
+          <span className="brand-name">
+            XPEED<span>GROUP</span>
+          </span>
+        </Link>
+        <Link className="subpage-back" href="/">
+          <span aria-hidden="true">←</span> Back to Xpeed Group
+        </Link>
       </header>
 
-      <main className="mx-auto max-w-4xl px-4 py-12 sm:px-6 lg:px-8">
-        <div className="rounded-2xl border border-slate-200 bg-white p-8 shadow-sm">
-          <h1 className="text-3xl font-bold text-slate-900 mb-2">Privacy Policy — Xpeed Staff Management System</h1>
-          <p className="text-sm text-slate-500 mb-8">Last updated: January 2025</p>
+      <div className="subpage-banner">
+        <div className="subpage-banner-inner">
+          <p className="eyebrow eyebrow-light">Xpeed Group · Company information</p>
+          <h1>
+            Your privacy
+            <br />
+            matters <em>to us.</em>
+          </h1>
+          <p className="subpage-banner-copy">
+            A clear guide to how information is collected, used, and protected
+            across Xpeed Group software systems.
+          </p>
+        </div>
+      </div>
 
-          <div className="prose prose-slate max-w-none">
+      <div className="subpage-document-wrap">
+        <aside className="subpage-sidebar">
+          <span>DOCUMENT</span>
+          <strong>Privacy policy</strong>
+          <span>LAST UPDATED</span>
+          <strong>January 2025</strong>
+          <Link href="/privacy-policy/xpeed-salary">
+            Salary portal policy <span aria-hidden="true">↗</span>
+          </Link>
+        </aside>
+
+        <article className="policy-document">
+          <div className="policy-document-heading">
+            <p className="eyebrow">Xpeed Group Software Suite</p>
+            <h2>Privacy Policy</h2>
+            <p>Last updated: January 2025</p>
+          </div>
+
+          <div className="policy-content">
             <h2 className="text-xl font-semibold text-slate-900 mt-6 mb-3">1. Overview</h2>
             <p className="text-slate-600 leading-relaxed mb-4">
-              The Xpeed Staff Management System is an internal application used by Xpeed Group to manage employee records, payroll, payments, and related HR operations across its hotel and business properties (Orkid Hills, Putra Hills, and others). This Privacy Policy describes how employee personal data is collected, used, stored, and protected within the system.
+              Xpeed Group operates a suite of internal business software systems to support its operations across energy, hospitality, and real estate. These systems include, but are not limited to: Finance Software, Salary Software, FrontDesk Software (Property Management System / PMS), Staff Management, and various other operational tools. This Privacy Policy describes how personal and business data is collected, used, stored, and protected across all Xpeed Group software systems.
             </p>
 
-            <h2 className="text-xl font-semibold text-slate-900 mt-6 mb-3">2. Information Collected</h2>
-            <p className="text-slate-600 leading-relaxed mb-4">
-              The system collects and processes the following categories of employee data:
-            </p>
+            <h2 className="text-xl font-semibold text-slate-900 mt-6 mb-3">2. Scope of Systems Covered</h2>
             <ul className="list-disc pl-6 text-slate-600 space-y-2 mb-4">
-              <li><strong>Identity:</strong> Full name, IC/passport number, nationality, email address, phone number.</li>
-              <li><strong>Employment:</strong> Role (super-admin, admin, moderator, user), assigned property/hotel, active status, timestamps of creation and updates.</li>
-              <li><strong>Financial:</strong> Payable records, payment history, receipts, and transaction details.</li>
-              <li><strong>Authentication:</strong> Hashed password, refresh token hash, login activity.</li>
-              <li><strong>Operational:</strong> Reports, ledger entries, and audit trails generated through system use.</li>
+              <li><strong>Finance Software:</strong> Accounting, invoicing, expense tracking, financial reporting, and budget management.</li>
+              <li><strong>Salary Software:</strong> Payroll processing, payslip generation, tax document management (EA/EC forms), salary history, and disbursement tracking.</li>
+              <li><strong>FrontDesk Software (PMS):</strong> Hotel property management including guest reservations, check-in/check-out, room allocation, billing, and guest profiles.</li>
+              <li><strong>Staff Management:</strong> Employee records, role-based access, attendance, leave tracking, and HR operations.</li>
+              <li><strong>Other Operational Tools:</strong> Reporting dashboards, inventory management, vendor management, and any additional internal systems deployed by Xpeed Group.</li>
             </ul>
 
-            <h2 className="text-xl font-semibold text-slate-900 mt-6 mb-3">3. Purpose of Processing</h2>
+            <h2 className="text-xl font-semibold text-slate-900 mt-6 mb-3">3. Information Collected</h2>
+            <p className="text-slate-600 leading-relaxed mb-4">
+              Depending on the system used, the following categories of data may be collected:
+            </p>
             <ul className="list-disc pl-6 text-slate-600 space-y-2 mb-4">
-              <li>Managing employee onboarding, profiles, and role-based access.</li>
-              <li>Tracking payables, payments, and generating payslips/receipts.</li>
-              <li>Producing financial and operational reports.</li>
-              <li>Ensuring system security and preventing unauthorized access.</li>
-              <li>Complying with statutory and internal audit requirements.</li>
+              <li><strong>Personal Identity:</strong> Name, IC/passport number, nationality, email, phone number, address.</li>
+              <li><strong>Employment Data:</strong> Role, department, assigned property, salary, bank details, tax information, leave balances.</li>
+              <li><strong>Financial Data:</strong> Transaction records, invoices, expenses, payroll entries, payment receipts, budget allocations.</li>
+              <li><strong>Guest Data (PMS):</strong> Guest name, contact details, reservation history, billing, payment method, stay preferences.</li>
+              <li><strong>Authentication Data:</strong> Hashed passwords, refresh tokens, login activity, role assignments.</li>
+              <li><strong>Operational Data:</strong> Reports, audit logs, inventory records, vendor information, and system usage metrics.</li>
             </ul>
 
-            <h2 className="text-xl font-semibold text-slate-900 mt-6 mb-3">4. Access Control</h2>
+            <h2 className="text-xl font-semibold text-slate-900 mt-6 mb-3">4. Purpose of Processing</h2>
+            <ul className="list-disc pl-6 text-slate-600 space-y-2 mb-4">
+              <li>Managing day-to-day business operations across finance, HR, and hospitality.</li>
+              <li>Processing payroll and generating statutory tax documents.</li>
+              <li>Managing hotel reservations, guest services, and property operations.</li>
+              <li>Generating financial, operational, and compliance reports.</li>
+              <li>Enforcing role-based access control and system security.</li>
+              <li>Complying with Malaysian statutory requirements (EPF, SOCSO, EIS, PCB, etc.).</li>
+            </ul>
+
+            <h2 className="text-xl font-semibold text-slate-900 mt-6 mb-3">5. Access Control & Roles</h2>
             <p className="text-slate-600 leading-relaxed mb-4">
-              Access to the system is role-based. Super-admins have full control, admins manage day-to-day operations, moderators have limited access, and users can view their own records. Employees can only access data relevant to their role and assigned property.
+              All systems enforce role-based access control. Roles include super-admin, admin, moderator, and user. Each role has defined permissions, and users can only access data and functions relevant to their role and assigned property. Cross-system access is restricted to authorized personnel only.
             </p>
 
-            <h2 className="text-xl font-semibold text-slate-900 mt-6 mb-3">5. Data Security</h2>
+            <h2 className="text-xl font-semibold text-slate-900 mt-6 mb-3">6. Data Security</h2>
             <ul className="list-disc pl-6 text-slate-600 space-y-2 mb-4">
               <li>Passwords are hashed using bcrypt before storage.</li>
-              <li>Refresh tokens are stored as hashes, not plaintext.</li>
-              <li>Authentication is required for all protected endpoints.</li>
-              <li>Data is transmitted over secure connections.</li>
-              <li>Access is logged and monitored for suspicious activity.</li>
+              <li>Refresh tokens are stored as hashes, never in plaintext.</li>
+              <li>All endpoints require authentication; sensitive operations require elevated privileges.</li>
+              <li>Data is transmitted over encrypted connections (HTTPS/TLS).</li>
+              <li>Access is logged and monitored for unauthorized activity.</li>
+              <li>Regular backups are performed to prevent data loss.</li>
             </ul>
 
-            <h2 className="text-xl font-semibold text-slate-900 mt-6 mb-3">6. Data Retention</h2>
+            <h2 className="text-xl font-semibold text-slate-900 mt-6 mb-3">7. Data Retention</h2>
             <p className="text-slate-600 leading-relaxed mb-4">
-              Employee records and financial data are retained for the duration of employment and for a minimum of 7 years thereafter, in compliance with Malaysian statutory requirements. Inactive accounts may be archived but not deleted unless legally required.
+              Data is retained for the duration required by business operations and Malaysian statutory law. Financial and payroll records are retained for a minimum of 7 years. Guest records are retained for the period required by hospitality regulations. Inactive accounts are archived but not permanently deleted unless legally required.
             </p>
 
-            <h2 className="text-xl font-semibold text-slate-900 mt-6 mb-3">7. Employee Rights</h2>
+            <h2 className="text-xl font-semibold text-slate-900 mt-6 mb-3">8. Data Sharing</h2>
+            <p className="text-slate-600 leading-relaxed mb-4">
+              Data collected across Xpeed Group systems is not sold or shared with third parties except:
+            </p>
             <ul className="list-disc pl-6 text-slate-600 space-y-2 mb-4">
-              <li>Right to access your own profile and payment records.</li>
-              <li>Right to request correction of inaccurate personal data.</li>
-              <li>Right to request a copy of your data held in the system.</li>
+              <li>When required by law or statutory authorities.</li>
+              <li>With trusted service providers (hosting, cloud storage) bound by data protection agreements.</li>
+              <li>During business transfers such as mergers or acquisitions.</li>
+            </ul>
+
+            <h2 className="text-xl font-semibold text-slate-900 mt-6 mb-3">9. User Rights</h2>
+            <ul className="list-disc pl-6 text-slate-600 space-y-2 mb-4">
+              <li>Right to access your own records and data held in the system.</li>
+              <li>Right to request correction of inaccurate information.</li>
+              <li>Right to request a copy of your personal data.</li>
               <li>Right to report suspected data breaches or unauthorized access.</li>
             </ul>
 
-            <h2 className="text-xl font-semibold text-slate-900 mt-6 mb-3">8. Third-Party Services</h2>
+            <h2 className="text-xl font-semibold text-slate-900 mt-6 mb-3">10. Third-Party Services</h2>
             <p className="text-slate-600 leading-relaxed mb-4">
-              The system may use third-party services for file storage (image uploads) and hosting. These providers are bound by their own privacy policies and data protection agreements.
+              Xpeed Group software systems may use third-party services for hosting, file storage, email delivery, and analytics. These providers are bound by their own privacy policies and data protection agreements.
             </p>
 
-            <h2 className="text-xl font-semibold text-slate-900 mt-6 mb-3">9. Changes to This Policy</h2>
+            <h2 className="text-xl font-semibold text-slate-900 mt-6 mb-3">11. Changes to This Policy</h2>
             <p className="text-slate-600 leading-relaxed mb-4">
-              We may update this Privacy Policy as the system evolves. Changes will be communicated to employees through the system or via internal channels.
+              We may update this Privacy Policy as systems evolve. Changes will be communicated to users through the respective systems or via internal channels.
             </p>
 
-            <h2 className="text-xl font-semibold text-slate-900 mt-6 mb-3">10. Contact</h2>
+            <h2 className="text-xl font-semibold text-slate-900 mt-6 mb-3">12. Contact</h2>
             <p className="text-slate-600 leading-relaxed mb-4">
-              For privacy-related inquiries regarding the Xpeed Staff Management System, contact:
+              For privacy-related inquiries regarding any Xpeed Group software system, contact:
             </p>
-            <div className="bg-slate-50 rounded-xl p-4">
+            <div className="policy-contact-card">
               <p className="text-slate-700">
                 <strong>Email:</strong> hamad.ismail.gub@gmail.com<br />
                 <strong>Phone:</strong> +880 1816401515
               </p>
             </div>
           </div>
-        </div>
-      </main>
-    </div>
+        </article>
+      </div>
+
+      <footer className="subpage-footer">
+        <Link className="brand brand-footer" href="/" aria-label="Xpeed Group home">
+          <span className="brand-mark" aria-hidden="true">X</span>
+          <span className="brand-name">
+            XPEED<span>GROUP</span>
+          </span>
+        </Link>
+        <span>© {new Date().getFullYear()} Xpeed Group</span>
+        <Link href="/privacy-policy/xpeed-salary">Salary privacy policy</Link>
+      </footer>
+    </main>
   )
 }

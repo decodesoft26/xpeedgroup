@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="820" viewBox="0 0 1000 820" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="505" y1="0" x2="505" y2="820" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#D7B98D"/>
+      <stop offset=".48" stop-color="#83927A"/>
+      <stop offset="1" stop-color="#32483A"/>
+    </linearGradient>
+    <linearGradient id="hotel" x1="446" y1="210" x2="571" y2="745" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F0E9D8"/>
+      <stop offset="1" stop-color="#B9B9A0"/>
+    </linearGradient>
+    <pattern id="windows" width="56" height="68" patternUnits="userSpaceOnUse">
+      <path d="M13 13h28v39H13z" fill="#5B715F"/>
+      <path d="M17 17h20v31H17z" fill="#D1F36A" fill-opacity=".52"/>
+    </pattern>
+  </defs>
+  <path fill="url(#bg)" d="M0 0h1000v820H0z"/>
+  <circle cx="756" cy="151" r="79" fill="#F3E6C5" fill-opacity=".8"/>
+  <path d="M0 505c156-103 255-111 372-61 108 46 205 52 309-12 111-68 211-46 319 22v366H0z" fill="#556D56"/>
+  <path d="m301 342 200-113 200 113v381H301z" fill="url(#hotel)"/>
+  <path d="m266 350 235-144 235 144v26H266z" fill="#E7DDC8"/>
+  <path d="M323 377h354v281H323z" fill="url(#windows)"/>
+  <path d="M476 499h49v224h-49z" fill="#536A57"/>
+  <path d="M0 683c148-52 313-57 481-20 151 34 329 30 519-30v187H0z" fill="#283D31"/>
+  <path d="M143 543h51v180h-51zm663-20h43v188h-43z" fill="#7E9270"/>
+  <circle cx="170" cy="499" r="45" fill="#6F8765"/>
+  <circle cx="829" cy="488" r="52" fill="#71896C"/>
+  <path d="M102 726h786" stroke="#E5D8B6" stroke-opacity=".6" stroke-width="3"/>
+</svg>

@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1100" viewBox="0 0 1800 1100" fill="none">
+  <defs>
+    <linearGradient id="sky" x1="1100" y1="80" x2="800" y2="1000" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#526556"/>
+      <stop offset=".52" stop-color="#283D33"/>
+      <stop offset="1" stop-color="#14251F"/>
+    </linearGradient>
+    <linearGradient id="glass" x1="1150" y1="270" x2="1400" y2="1000" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#72877A"/>
+      <stop offset="1" stop-color="#253A30"/>
+    </linearGradient>
+    <linearGradient id="road" x1="1200" y1="700" x2="1100" y2="1100" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#31483A"/>
+      <stop offset="1" stop-color="#172A21"/>
+    </linearGradient>
+    <pattern id="windows" width="40" height="52" patternUnits="userSpaceOnUse">
+      <path d="M9 10h18v29H9z" fill="#D1F36A" fill-opacity=".19"/>
+      <path d="M9 44h18" stroke="#C3D0BE" stroke-opacity=".15"/>
+    </pattern>
+    <pattern id="small-windows" width="35" height="43" patternUnits="userSpaceOnUse">
+      <path d="M8 9h16v24H8z" fill="#D8E3D4" fill-opacity=".13"/>
+    </pattern>
+  </defs>
+  <path fill="url(#sky)" d="M0 0h1800v1100H0z"/>
+  <circle cx="1284" cy="243" r="148" fill="#D1F36A" fill-opacity=".08"/>
+  <circle cx="1284" cy="243" r="222" stroke="#D1F36A" stroke-opacity=".12"/>
+  <path d="M0 697 202 633l171 35 208-124 155 43 181-160 170 91 211-215 164 68 141-110 197 92v747H0z" fill="#23392E" fill-opacity=".78"/>
+  <path d="m0 800 168-111 137 49 108-101 148 76 113-134 110 55 117-133 129 88 122-92 102 45 145-150 131 68 170-101v641H0z" fill="#1A3026"/>
+  <path d="m918 1100 108-509 148-135 152 113 172 531z" fill="url(#glass)"/>
+  <path d="m1026 591 148-135 152 113 172 531h-580z" fill="url(#windows)" opacity=".9"/>
+  <path d="m1222 579 100-244 149 69 120 696h-195z" fill="#3E5748"/>
+  <path d="m1322 335 149 69 120 696h-195z" fill="url(#small-windows)"/>
+  <path d="m1434 646 128-207 115 52 123 609h-330z" fill="#31483B"/>
+  <path d="m1562 439 115 52 123 609h-330z" fill="url(#windows)" opacity=".72"/>
+  <path d="m596 695 119-137 127 44 52 498H542z" fill="#2B4234"/>
+  <path d="m715 558 127 44 52 498H542z" fill="url(#small-windows)"/>
+  <path d="M0 922c265-91 508-117 739-73 239 45 449 128 712 128 140 0 257-23 349-57v180H0z" fill="url(#road)"/>
+  <path d="M1114 1100c93-48 201-92 322-133 115-39 237-65 364-77" stroke="#D1F36A" stroke-opacity=".43" stroke-width="3"/>
+  <path d="M0 1011c257-72 466-79 686-44" stroke="#D1F36A" stroke-opacity=".3" stroke-width="2"/>
+  <path d="M0 0h1800v1100H0z" fill="url(#sky)" fill-opacity=".16"/>
+</svg>

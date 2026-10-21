@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="820" viewBox="0 0 1000 820" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="500" y1="0" x2="500" y2="820" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#B7C8C0"/>
+      <stop offset=".5" stop-color="#728B7F"/>
+      <stop offset="1" stop-color="#344D40"/>
+    </linearGradient>
+    <linearGradient id="tower" x1="530" y1="126" x2="701" y2="735" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#E7E8D7"/>
+      <stop offset="1" stop-color="#A4B2A2"/>
+    </linearGradient>
+    <pattern id="windows" width="39" height="44" patternUnits="userSpaceOnUse">
+      <path d="M9 7h22v29H9z" fill="#546E61" fill-opacity=".85"/>
+      <path d="M12 10h16v23H12z" fill="#C8E2BB" fill-opacity=".64"/>
+    </pattern>
+  </defs>
+  <path fill="url(#bg)" d="M0 0h1000v820H0z"/>
+  <path d="M0 596c175-87 328-93 459-22 132 72 263 60 541-39v285H0z" fill="#48634F"/>
+  <path d="m474 248 48-93h137l46 93v488H474z" fill="url(#tower)"/>
+  <path d="M522 155h137l46 93H474z" fill="#ECEDDC"/>
+  <path d="M494 260h183v403H494z" fill="url(#windows)"/>
+  <path d="M688 362h139l44 373H688z" fill="#B8C4B0"/>
+  <path d="M713 385h91v300h-91z" fill="url(#windows)"/>
+  <path d="M142 451h161v284H142z" fill="#D2D7C4"/>
+  <path d="M161 473h123v201H161z" fill="url(#windows)"/>
+  <path d="M0 735h1000" stroke="#D1F36A" stroke-opacity=".44" stroke-width="3"/>
+  <path d="M354 735c52-65 93-113 136-140 44-28 81-32 143-32" stroke="#DBE5D4" stroke-opacity=".5" stroke-width="2"/>
+  <circle cx="127" cy="374" r="57" fill="#668366"/>
+  <circle cx="877" cy="311" r="40" fill="#668366"/>
+</svg>

@@ -1,246 +1,310 @@
 import type { Metadata } from "next"
-import { Inter } from "next/font/google"
-import Link from "next/link"
 import Image from "next/image"
-
-const inter = Inter({ subsets: ["latin"] })
+import Link from "next/link"
 
 export const metadata: Metadata = {
-  title: "Xpeed Group | Energy, Hospitality & Real Estate",
-  description: "Xpeed Group is a diversified Malaysian company delivering growth across energy and infrastructure, hospitality, and real estate development.",
+  title: "Xpeed Group | Building businesses that move us forward",
+  description:
+    "Discover Xpeed Group, a Malaysian group of companies creating lasting value across energy, hospitality, and real estate.",
 }
+
+const sectors = [
+  {
+    number: "01",
+    name: "Energy & infrastructure",
+    description:
+      "Keeping people and businesses moving with dependable energy solutions and infrastructure.",
+    image: "/images/energy-fallback.svg",
+    imageAlt: "Illustrated energy infrastructure at dusk",
+    link: "#ventures",
+  },
+  {
+    number: "02",
+    name: "Hospitality & dining",
+    description:
+      "Thoughtful stays and welcoming dining experiences, made memorable by the details.",
+    image: "/images/hospitality-fallback.svg",
+    imageAlt: "Illustrated hotel and hospitality destination",
+    link: "#ventures",
+  },
+  {
+    number: "03",
+    name: "Real estate",
+    description:
+      "Places designed to bring people together and support the communities around them.",
+    image: "/images/real-estate-fallback.svg",
+    imageAlt: "Illustrated residential and commercial development",
+    link: "#ventures",
+  },
+]
+
+const ventures = [
+  { name: "Xpeed Energy Resources", category: "Energy", image: sectors[0].image },
+  { name: "ECO Hotel @ BBCC", category: "Hospitality", image: sectors[1].image },
+  { name: "Orkid Hills Hotel", category: "Hospitality", image: sectors[1].image },
+  { name: "BeRempah Restaurants", category: "Dining", image: sectors[1].image },
+  { name: "Takwa Tower", category: "Real estate", image: sectors[2].image },
+  { name: "Orkid Hills Residences", category: "Real estate", image: sectors[2].image },
+]
 
 export default function HomePage() {
   return (
-    <div className="min-h-screen bg-white">
-      {/* Header */}
-      <header className="sticky top-0 z-50 border-b border-slate-200 bg-white/95 backdrop-blur-sm">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="flex h-16 items-center justify-between">
-            <Link href="/" className="flex items-center gap-3">
-              <div className="relative h-10 w-10 overflow-hidden rounded-full border border-amber-200 bg-amber-100">
-                <Image src="/logo.jpeg" alt="Xpeed Group" width={40} height={40} className="object-cover" />
-              </div>
-              <div>
-                <div className="text-lg font-black tracking-tight text-slate-900">Xpeed Group</div>
-                <div className="text-[10px] font-semibold tracking-[0.26em] text-slate-500 uppercase">Diversified Holdings</div>
-              </div>
-            </Link>
-            <nav className="hidden md:flex items-center gap-8 text-sm font-medium text-slate-600">
-              <a href="#about" className="hover:text-slate-900 transition">About</a>
-              <a href="#segments" className="hover:text-slate-900 transition">Segments</a>
-              <a href="#ventures" className="hover:text-slate-900 transition">Ventures</a>
-              <a href="#team" className="hover:text-slate-900 transition">Team</a>
-              <a href="#contact" className="hover:text-slate-900 transition">Contact</a>
-            </nav>
-            <Link href="/xpeed-salary" className="rounded-full bg-slate-950 px-5 py-2 text-sm font-semibold text-white hover:bg-slate-800 transition">
-              Employee Portal
-            </Link>
-          </div>
+    <main id="top">
+      <div className="announcement">
+        <p>Growing with purpose across Malaysia</p>
+        <a href="#contact">
+          Start a conversation <span aria-hidden="true">↗</span>
+        </a>
+      </div>
+
+      <header className="site-header">
+        <div className="header-inner">
+          <Link className="brand" href="/" aria-label="Xpeed Group home">
+            <span className="brand-mark" aria-hidden="true">
+              X
+            </span>
+            <span className="brand-name">
+              XPEED<span>GROUP</span>
+            </span>
+          </Link>
+
+          <nav className="main-nav" aria-label="Main navigation">
+            <a href="#about">About</a>
+            <a href="#sectors">What we do</a>
+            <a href="#ventures">Our ventures</a>
+            <a href="#contact">Contact</a>
+          </nav>
+
+          <Link className="header-cta" href="/privacy-policy">
+            Privacy policies <span aria-hidden="true">↗</span>
+          </Link>
         </div>
       </header>
 
-      {/* Hero */}
-      <section className="relative bg-slate-950 text-white">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_rgba(251,191,36,0.15),_transparent_50%),radial-gradient(circle_at_bottom_right,_rgba(16,185,129,0.1),_transparent_50%)]" />
-        <div className="relative mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8 lg:py-32">
-          <div className="max-w-3xl">
-            <span className="inline-block rounded-full border border-white/15 bg-white/5 px-3 py-1.5 text-[10px] font-bold tracking-[0.28em] text-amber-200 uppercase">
-              Energy • Hospitality • Real Estate
-            </span>
-            <h1 className="mt-6 text-4xl font-black tracking-tight sm:text-5xl lg:text-6xl">
-              Shaping growth across essential industries.
-            </h1>
-            <p className="mt-6 text-lg text-slate-300 leading-relaxed">
-              Xpeed Group brings together strategic businesses in fuel, hospitality, and property development to deliver dependable value, trusted service, and long-term opportunity.
+      <section className="hero" aria-labelledby="hero-title">
+        <Image
+          className="hero-image"
+          src="/images/group-hero-fallback.svg"
+          alt=""
+          fill
+          priority
+          sizes="100vw"
+        />
+        <div className="hero-shade" />
+        <div className="hero-content">
+          <p className="eyebrow eyebrow-light">
+            <span /> A diversified Malaysian group
+          </p>
+          <h1 id="hero-title">
+            Building what
+            <br />
+            moves us <em>forward.</em>
+          </h1>
+          <p className="hero-description">
+            From the energy that powers progress to the places where life
+            happens, we build businesses with purpose and a long view.
+          </p>
+          <div className="hero-actions">
+            <a className="button button-lime" href="#sectors">
+              Discover Xpeed Group <span aria-hidden="true">↓</span>
+            </a>
+            <a className="text-link text-link-light" href="#ventures">
+              Explore our ventures <span aria-hidden="true">↗</span>
+            </a>
+          </div>
+        </div>
+        <div className="hero-caption">
+          <span>Energy</span>
+          <i />
+          <span>Hospitality</span>
+          <i />
+          <span>Real estate</span>
+        </div>
+        <a className="hero-scroll" href="#about" aria-label="Scroll to about">
+          <span>Scroll to explore</span>
+          <span aria-hidden="true">↓</span>
+        </a>
+      </section>
+
+      <section className="intro section-wrap" id="about">
+        <div className="intro-label">
+          <p className="eyebrow">The Xpeed Group</p>
+          <span className="intro-index">01 / 04</span>
+        </div>
+        <div className="intro-copy">
+          <h2>
+            Different industries.
+            <br />
+            <span>One shared ambition.</span>
+          </h2>
+          <div className="intro-lower">
+            <p>
+              We bring together a diverse portfolio of businesses connected by
+              a simple belief: lasting progress comes from doing the everyday
+              things exceptionally well.
             </p>
-            <div className="mt-8 flex flex-wrap gap-4">
-              <a href="#ventures" className="rounded-full bg-amber-400 px-6 py-3 text-sm font-semibold text-slate-950 hover:bg-amber-300 transition">
-                Our Ventures
-              </a>
-              <a href="#contact" className="rounded-full border border-white/20 bg-white/5 px-6 py-3 text-sm font-semibold text-white hover:bg-white/10 transition">
-                Contact Us
-              </a>
-            </div>
+            <p>
+              With roots in Malaysia and an eye on what comes next, we pair
+              practical experience with thoughtful growth to create value for
+              customers, partners, and communities.
+            </p>
           </div>
         </div>
       </section>
 
-      {/* About */}
-      <section id="about" className="py-20">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="grid gap-12 lg:grid-cols-2">
-            <div>
-              <p className="text-xs font-bold tracking-[0.3em] text-amber-600 uppercase">About Us</p>
-              <h2 className="mt-4 text-3xl font-black tracking-tight text-slate-900 sm:text-4xl">
-                Strong foundations. Thoughtful growth. Real impact.
-              </h2>
-              <p className="mt-6 text-base leading-8 text-slate-600">
-                Xpeed Group has built a reputation for strategic diversification, dependable execution, and community-centered growth. Our ventures reflect a shared commitment to quality, trust, and value across every sector we serve.
-              </p>
-              <div className="mt-8 space-y-3">
-                {[
-                  "Integrated business model across essential sectors",
-                  "Customer-first service built on trust and consistency",
-                  "Long-term planning for resilient and sustainable growth",
-                  "Operational excellence in energy, hospitality, and property",
-                ].map((point) => (
-                  <div key={point} className="flex items-start gap-3">
-                    <div className="mt-1 h-5 w-5 rounded-full bg-amber-100 flex items-center justify-center text-xs font-bold text-amber-700">✓</div>
-                    <p className="text-sm text-slate-700">{point}</p>
-                  </div>
-                ))}
+      <section className="sectors section-wrap" id="sectors">
+        <div className="section-heading">
+          <div>
+            <p className="eyebrow">Where we make a difference</p>
+            <h2>Our business pillars</h2>
+          </div>
+          <p className="section-aside">
+            Essential industries. Real-world impact. A future built together.
+          </p>
+        </div>
+        <div className="sector-grid">
+          {sectors.map((sector) => (
+            <a className="sector-card" href={sector.link} key={sector.name}>
+              <div className="sector-image">
+                <Image
+                  src={sector.image}
+                  alt={sector.imageAlt}
+                  fill
+                  sizes="(max-width: 760px) 100vw, 33vw"
+                />
+                <span className="sector-number">{sector.number}</span>
+                <span className="sector-arrow" aria-hidden="true">
+                  ↗
+                </span>
               </div>
-            </div>
-            <div className="grid grid-cols-2 gap-4">
-              {[
-                { value: "2015", label: "Founded" },
-                { value: "11+", label: "Ventures" },
-                { value: "3", label: "Sectors" },
-                { value: "500+", label: "Team Members" },
-              ].map((item) => (
-                <div key={item.label} className="rounded-2xl border border-slate-200 bg-slate-50 p-6 text-center">
-                  <div className="text-3xl font-black text-slate-900">{item.value}</div>
-                  <div className="mt-2 text-sm text-slate-600">{item.label}</div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Segments */}
-      <section id="segments" className="py-20 bg-slate-50">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-2xl mx-auto mb-12">
-            <p className="text-xs font-bold tracking-[0.3em] text-amber-600 uppercase">Business Pillars</p>
-            <h2 className="mt-4 text-3xl font-black tracking-tight text-slate-900 sm:text-4xl">
-              Purposeful businesses built for everyday life and long-term growth.
-            </h2>
-          </div>
-          <div className="grid gap-6 md:grid-cols-3">
-            {[
-              { title: "Energy & Infrastructure", desc: "CNG, Diesel, Octane & LPG operations across Malaysia.", icon: "⚡", color: "from-amber-500 to-orange-500" },
-              { title: "Hospitality Group", desc: "Hotels and restaurants designed for comfort and memorable experiences.", icon: "🏨", color: "from-emerald-500 to-teal-500" },
-              { title: "Real Estate Development", desc: "Residential and mixed-use developments built for long-term value.", icon: "🏙️", color: "from-sky-500 to-indigo-500" },
-            ].map((seg) => (
-              <div key={seg.title} className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
-                <div className={`inline-flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br ${seg.color} text-2xl mb-4`}>
-                  {seg.icon}
-                </div>
-                <h3 className="text-xl font-bold text-slate-900">{seg.title}</h3>
-                <p className="mt-2 text-sm text-slate-600">{seg.desc}</p>
+              <div className="sector-copy">
+                <h3>{sector.name}</h3>
+                <p>{sector.description}</p>
               </div>
-            ))}
-          </div>
+            </a>
+          ))}
         </div>
       </section>
 
-      {/* Ventures */}
-      <section id="ventures" className="py-20">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-2xl mx-auto mb-12">
-            <p className="text-xs font-bold tracking-[0.3em] text-amber-600 uppercase">Our Ventures</p>
-            <h2 className="mt-4 text-3xl font-black tracking-tight text-slate-900 sm:text-4xl">
-              Sister companies and signature destinations.
-            </h2>
-          </div>
-          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {[
-              { title: "Xpeed Energy Resources", subtitle: "Energy", image: "/images/xpeed_energy_resources.jpeg" },
-              { title: "ECO Hotel @ BBCC", subtitle: "Hospitality", image: "/images/eco_and_orkid_hills_hotel.jpeg" },
-              { title: "Orkid Hills Hotel", subtitle: "Hospitality", image: "/images/eco_and_orkid_hills_hotel.jpeg" },
-              { title: "BeRempah Restaurants", subtitle: "Dining", image: "/images/berempahh.jpeg" },
-              { title: "Takwa Tower", subtitle: "Real Estate", image: "/images/takwa_tower_and_blue_heights.jpeg" },
-              { title: "Orkid Hills Residences", subtitle: "Real Estate", image: "/images/orkidhills_1.jpeg" },
-            ].map((v) => (
-              <div key={v.title} className="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm">
-                <div className="relative h-48">
-                  <Image src={v.image} alt={v.title} fill className="object-cover" />
-                </div>
-                <div className="p-4">
-                  <span className="inline-block rounded-full bg-amber-50 px-2 py-0.5 text-[10px] font-bold text-amber-700 uppercase">{v.subtitle}</span>
-                  <h3 className="mt-2 font-bold text-slate-900">{v.title}</h3>
-                </div>
+      <section className="ventures section-wrap" id="ventures">
+        <div className="ventures-intro">
+          <p className="eyebrow">The people behind the promise</p>
+          <h2>
+            A portfolio of
+            <br />
+            <em>possibility.</em>
+          </h2>
+          <p>
+            Each venture has its own character. Together, they reflect the
+            breadth of what Xpeed Group can do.
+          </p>
+          <a className="text-link" href="#contact">
+            Talk to our team <span aria-hidden="true">↗</span>
+          </a>
+        </div>
+        <div className="venture-grid">
+          {ventures.map((venture, index) => (
+            <article className="venture-card" key={venture.name}>
+              <div className="venture-image">
+                <Image
+                  src={venture.image}
+                  alt={`${venture.category} placeholder artwork`}
+                  fill
+                  sizes="(max-width: 760px) 100vw, 25vw"
+                />
+                <span className="venture-count">
+                  {String(index + 1).padStart(2, "0")}
+                </span>
               </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Team */}
-      <section id="team" className="py-20 bg-slate-50">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-2xl mx-auto mb-12">
-            <p className="text-xs font-bold tracking-[0.3em] text-amber-600 uppercase">Leadership</p>
-            <h2 className="mt-4 text-3xl font-black tracking-tight text-slate-900 sm:text-4xl">
-              A forward-looking team driving the group's next chapter.
-            </h2>
-          </div>
-          <div className="grid gap-6 md:grid-cols-3">
-            {[
-              { name: "Executive Leadership", role: "Strategic Vision", bio: "Guiding the group with long-term planning and sustainable growth." },
-              { name: "Operations Team", role: "Service Excellence", bio: "Ensuring each venture delivers dependable performance and consistency." },
-              { name: "Development & Hospitality", role: "Brand Experience", bio: "Shaping premium property and hospitality standards." },
-            ].map((m) => (
-              <div key={m.name} className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
-                <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-slate-900 text-lg font-bold text-white">
-                  {m.name.charAt(0)}
+              <div className="venture-meta">
+                <div>
+                  <p>{venture.category}</p>
+                  <h3>{venture.name}</h3>
                 </div>
-                <div className="text-xs font-bold text-amber-600 uppercase">{m.role}</div>
-                <h3 className="mt-2 text-xl font-bold text-slate-900">{m.name}</h3>
-                <p className="mt-2 text-sm text-slate-600">{m.bio}</p>
+                <span aria-hidden="true">↗</span>
               </div>
-            ))}
-          </div>
+            </article>
+          ))}
         </div>
       </section>
 
-      {/* Contact */}
-      <section id="contact" className="py-20">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="rounded-2xl border border-slate-200 bg-white p-8 shadow-sm">
-            <div className="grid gap-8 lg:grid-cols-2">
+      <section className="values">
+        <div className="values-inner">
+          <div>
+            <p className="eyebrow eyebrow-light">What guides us</p>
+            <h2>Good business is built on good principles.</h2>
+          </div>
+          <div className="value-list">
+            <article>
+              <span>01</span>
               <div>
-                <p className="text-xs font-bold tracking-[0.3em] text-amber-600 uppercase">Let's Connect</p>
-                <h2 className="mt-4 text-3xl font-black tracking-tight text-slate-900">
-                  Partner with a group built on trust, scale, and vision.
-                </h2>
-                <p className="mt-4 text-slate-600">
-                  Whether exploring collaboration, hospitality, or real-estate partnerships, Xpeed Group is ready to engage.
-                </p>
+                <h3>Trust, earned daily</h3>
+                <p>We keep our word and show up for the people we serve.</p>
               </div>
-              <div className="space-y-4">
-                <div>
-                  <div className="text-[10px] font-bold tracking-[0.22em] text-slate-500 uppercase">Email</div>
-                  <a href="mailto:hamad.ismail.gub@gmail.com" className="text-base font-semibold text-slate-900">hamad.ismail.gub@gmail.com</a>
-                </div>
-                <div>
-                  <div className="text-[10px] font-bold tracking-[0.22em] text-slate-500 uppercase">Phone</div>
-                  <a href="tel:+8801816401515" className="text-base font-semibold text-slate-900">+880 1816401515</a>
-                </div>
-                <div>
-                  <div className="text-[10px] font-bold tracking-[0.22em] text-slate-500 uppercase">Location</div>
-                  <div className="text-base font-semibold text-slate-900">Malaysia</div>
-                </div>
+            </article>
+            <article>
+              <span>02</span>
+              <div>
+                <h3>Progress with purpose</h3>
+                <p>We grow thoughtfully, creating value that stands the test of time.</p>
               </div>
-            </div>
+            </article>
+            <article>
+              <span>03</span>
+              <div>
+                <h3>People at the heart</h3>
+                <p>Better experiences begin with understanding what matters to people.</p>
+              </div>
+            </article>
           </div>
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="border-t border-slate-200 bg-slate-50 py-8">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col items-center justify-between gap-4 md:flex-row">
-            <div className="text-sm text-slate-500">© 2025 Xpeed Group. All rights reserved.</div>
-            <div className="flex gap-6 text-sm text-slate-500">
-              <Link href="/privacy-policy" className="hover:text-slate-900 transition">Privacy Policy</Link>
-              <Link href="/xpeed-salary" className="hover:text-slate-900 transition">Employee Portal</Link>
-            </div>
+      <section className="contact section-wrap" id="contact">
+        <div className="contact-main">
+          <p className="eyebrow">Let’s build something meaningful</p>
+          <h2>
+            The next chapter
+            <br />
+            starts <em>together.</em>
+          </h2>
+          <a className="button button-dark" href="mailto:hamad.ismail.gub@gmail.com">
+            Get in touch <span aria-hidden="true">↗</span>
+          </a>
+        </div>
+        <div className="contact-details">
+          <p>For partnerships, opportunities, and general enquiries.</p>
+          <a href="mailto:hamad.ismail.gub@gmail.com">
+            hamad.ismail.gub@gmail.com
+          </a>
+          <a href="tel:+8801816401515">+880 1816401515</a>
+          <span>Malaysia</span>
+        </div>
+      </section>
+
+      <footer className="site-footer">
+        <div className="footer-main">
+          <Link className="brand brand-footer" href="/" aria-label="Xpeed Group home">
+            <span className="brand-mark" aria-hidden="true">
+              X
+            </span>
+            <span className="brand-name">
+              XPEED<span>GROUP</span>
+            </span>
+          </Link>
+          <p>Building businesses that move us forward.</p>
+          <a href="#top">
+            Back to top ↑
+          </a>
+        </div>
+        <div className="footer-bottom">
+          <span>© {new Date().getFullYear()} Xpeed Group. All rights reserved.</span>
+          <div>
+            <Link href="/privacy-policy">Privacy policy</Link>
+            <Link href="/privacy-policy/xpeed-salary">Salary privacy policy</Link>
           </div>
         </div>
       </footer>
-    </div>
+    </main>
   )
 }

@@ -38,7 +38,12 @@ export const metadata: Metadata = {
     siteName: "Xpeed Group",
     type: "website",
     images: [
-      { url: "/logo.jpeg", width: 1200, height: 630, alt: "Xpeed Group" },
+      {
+        url: "/images/group-hero-fallback.svg",
+        width: 1800,
+        height: 1100,
+        alt: "Xpeed Group",
+      },
     ],
   },
   twitter: {
@@ -46,10 +51,10 @@ export const metadata: Metadata = {
     title: "Xpeed Group",
     description:
       "Energy, hospitality and real estate ventures shaped by trust, service, and long-term value.",
-    images: ["/logo.jpeg"],
+    images: ["/images/group-hero-fallback.svg"],
   },
   icons: {
-    icon: "/logo.jpeg",
+    icon: "/images/xpeed-mark.svg",
   },
   alternates: {
     canonical: "/",
